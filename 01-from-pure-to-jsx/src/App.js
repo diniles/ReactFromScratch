@@ -1,4 +1,3 @@
-import './App.css';
 import Book from "./Book";
 
 const App = () => {
@@ -10,6 +9,5 @@ const App = () => {
     </div>
   )
 };
-
 
 export default App;
