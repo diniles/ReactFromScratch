@@ -1,26 +1,29 @@
-// import React from "react";
-import React, {Component} from "react";
+import React, {Component} from 'react';
 
-// class App extends React.Component {
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       count: 0,
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClickPlus = this.handleClickPlus.bind(this);
+    this.handleClickMinus = this.handleClickMinus.bind(this);
   }
 
-  handleClick() {
+  handleClickPlus() {
     this.setState({count: this.state.count + 1});
+  };
+
+  handleClickMinus() {
+    this.setState({count: this.state.count - 1});
   };
 
   render() {
     return (
       <div className="App">
-        <button onClick={() => this.setState({count: this.state.count + 1})}>+</button>
+        <button onClick={this.handleClickPlus}>+</button>
         <span>{this.state.count}</span>
-        <button onClick={() => this.setState({count: this.state.count - 1})}>-</button>
+        <button onClick={this.handleClickMinus}>-</button>
       </div>
     );
   }
