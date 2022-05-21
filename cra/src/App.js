@@ -8,7 +8,11 @@ class App extends Component {
   };
 
   handleClick = () => {
-    this.setState({count: this.state.count + 1})
+    // this.setState({count: this.state.count + 1})
+    // to change state more than once do this
+    this.setState((prevState) => ({count: prevState.count + 1}));
+    this.setState((prevState) => ({count: prevState.count + 1}));
+    this.setState((prevState) => ({count: prevState.count + 1}));
   }
 
   render() {
