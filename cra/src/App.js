@@ -29,7 +29,7 @@ class App extends Component {
       <div className="App">
         Common React Application
         <button onClick={() => this.setState({count: this.state.count + 1})}>+</button>
-        <button>{this.state.count}</button>
+        <span>{this.state.count}</span>
         <button onClick={() => this.setState({count: this.state.count - 1})}>-</button>
       </div>
     );
