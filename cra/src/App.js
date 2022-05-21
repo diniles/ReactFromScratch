@@ -6,24 +6,27 @@ class App extends Component {
     this.state = {
       count: 0,
     };
-    this.handleClickPlus = this.handleClickPlus.bind(this);
-    this.handleClickMinus = this.handleClickMinus.bind(this);
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
   }
 
-  handleClickPlus() {
+  increment() {
     this.setState({count: this.state.count + 1});
   };
 
-  handleClickMinus() {
+  decrement() {
     this.setState({count: this.state.count - 1});
   };
 
   render() {
     return (
-      <div className="App">
-        <button onClick={this.handleClickPlus}>+</button>
-        <span>{this.state.count}</span>
-        <button onClick={this.handleClickMinus}>-</button>
+      <div className="App" style={{margin: 'auto', width: '300px'}}>
+        <button onClick={this.decrement}>-</button>
+        <span style={{
+          margin: '0 0.75rem',
+          display: 'inline-block'
+        }}>{this.state.count}</span>
+        <button onClick={this.increment}>+</button>
       </div>
     );
   }
