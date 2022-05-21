@@ -7,30 +7,30 @@ class App extends Component {
     count: 0
   };
 
-  handleClick = () => {
-    // most common used scenario
-    // this.setState({count: this.state.count + 1})
-    // to change state more than once do this
-    // this.setState((prevState) => ({count: prevState.count + 1}), () => console.log('setState Complete'));
-    // this.setState((prevState) => ({count: prevState.count + 1}));
-    // this.setState((prevState) => ({count: prevState.count + 1}));
-    // console.log('from handleClick');
-  }
+  // handleClick = (sign) => {
+  //   // most common used scenario
+  //   // this.setState({count: this.state.count + 1})
+  //   // to change state more than once do this
+  //   // this.setState((prevState) => ({count: prevState.count + 1}), () => console.log('setState Complete'));
+  //   // this.setState((prevState) => ({count: prevState.count + 1}));
+  //   // this.setState((prevState) => ({count: prevState.count + 1}));
+  //   // console.log('from handleClick');
+  // }
 
-  handleClickPlus = () => {
-    this.setState({count: this.state.count + 1})
-  }
-  handleClickMinus = () => {
-    this.setState({count: this.state.count - 1})
-  }
+  // handleClickPlus = () => {
+  //   this.setState({count: this.state.count + 1})
+  // }
+  // handleClickMinus = () => {
+  //   this.setState({count: this.state.count - 1})
+  // }
 
   render() {
     return (
       <div className="App">
         Common React Application
-        <button onClick={this.handleClickPlus}>+</button>
-        <button onClick={this.handleClick}>{this.state.count}</button>
-        <button onClick={this.handleClickMinus}>-</button>
+        <button onClick={() => this.setState({count: this.state.count + 1})}>+</button>
+        <button>{this.state.count}</button>
+        <button onClick={() => this.setState({count: this.state.count - 1})}>-</button>
       </div>
     );
   }
