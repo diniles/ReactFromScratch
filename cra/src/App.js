@@ -20,6 +20,9 @@ class App extends Component {
   handleClickPlus = () => {
     this.setState({count: this.state.count + 1})
   }
+  handleClickMinus = () => {
+    this.setState({count: this.state.count - 1})
+  }
 
   render() {
     return (
@@ -27,6 +30,7 @@ class App extends Component {
         Common React Application
         <button onClick={this.handleClickPlus}>+</button>
         <button onClick={this.handleClick}>{this.state.count}</button>
+        <button onClick={this.handleClickMinus}>-</button>
       </div>
     );
   }
